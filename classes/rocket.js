@@ -6,7 +6,7 @@ class rocket {
     this.cxCanvas = cxCanvas;
     this.keyboard = keyboard;
     this.rocket = new Image();
-    this.rocket.src = `/assets/rocket.png`;
+    this.rocket.src = `assets/rocket.png`;
     this.pX = this.canvas.width - this.rocket.width;
     this.pY = 170;
     this.vel = 5;

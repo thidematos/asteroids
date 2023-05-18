@@ -13,7 +13,7 @@ class asteroid {
     this.directionX = 2;
     this.directionY = 2;
     this.asteroid = new Image();
-    this.asteroid.src = `/assets/ast.png`;
+    this.asteroid.src = `assets/ast.png`;
   }
 
   start() {

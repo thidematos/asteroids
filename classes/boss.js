@@ -11,7 +11,7 @@ class boss {
     this.directionX = 2;
     this.directionY = 2;
     this.asteroid = new Image();
-    this.asteroid.src = `/assets/boss.png`;
+    this.asteroid.src = `assets/boss.png`;
     this.pX =
       this.positions[0] < 82
         ? this.positions[0] + this.asteroid.width
