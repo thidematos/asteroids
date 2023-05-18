@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asteroids!</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+
+    <script src="/classes/rocket.js"></script>
+    <script src="/classes/asteroid.js"></script>
+    <script src="/classes/asteroid2.js"></script>
+    <script src="/classes/boss.js"></script>
+    <script src="/classes/thanos.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/1d41b3ab2c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <audio src="music.mp3" autoplay="true" loop="true" id="music"></audio>
+    <aside class="instructions">
+      <h1 class="aside-header">Rules!</h1>
+      <ul class="aside-list">
+        <li class="aside-elements">Press Start to play Asteroids!</li>
+        <li class="aside-elements">Move the Rocket with "w", "a", "s", "d"</li>
+        <li class="aside-elements">
+          If your Rocket colides into an Asteroid (or even Thanos!), you lose!
+        </li>
+        <li class="aside-elements">
+          The Score is incresead by 100 every 10s of survivor!
+        </li>
+        <li class="aside-elements">
+          If the Rocket is not moved for 5s, the Score will be reduced by 50.
+        </li>
+        <li class="aside-elements">
+          Press Restart to reset the position of the enemies.
+        </li>
+      </ul>
+    </aside>
+    <div class="header">
+      <h1 class="header__h1">ASTEROIDS!</h1>
+      <div class="header__div">
+        <h2 class="div__header">TIMER</h2>
+        <p class="div__timer">00:00</p>
+      </div>
+      <img src="/assets/fiap.png" alt="" class="header__img" />
+    </div>
+    <canvas id="canvas" width="800" height="400"> </canvas>
+    <div class="footer">
+      <div class="score">
+        <h2 class="score__h2">SCORE</h2>
+        <p class="score__p">---</p>
+      </div>
+      <button
+        id="btnStart"
+        onclick="Asteroid.start(), Asteroid2.start(), Boss.start(), Thanos.start(), timerStart()"
+      >
+        START
+      </button>
+      <button id="btnRestart">restart</button>
+      <button id="play">
+        <i class="fa-regular fa-circle-pause"></i>
+      </button>
+    </div>
+    <div class="gameOver-container hidden">
+      <h3 class="gameOver">GAME OVER!</h3>
+      <h4 class="results">BEST SCORE:</h4>
+      <p class="bestScore"></p>
+      <p class="tryAgain">Press Restart and Start a new game!</p>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
