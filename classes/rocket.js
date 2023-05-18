@@ -7,8 +7,11 @@ class rocket {
     this.keyboard = keyboard;
     this.rocket = new Image();
     this.rocket.src = `assets/rocket.png`;
-    this.pX = this.canvas.width - this.rocket.width;
+    this.pX = this.canvas.width - 61;
     this.pY = 170;
+    this.rocket.addEventListener('load', () => {
+      this.draw();
+    });
     this.vel = 5;
   }
 
