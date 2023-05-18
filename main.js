@@ -56,14 +56,14 @@ const timerStart = function () {
     }
   }, 1000);
 
+  let ok = false;
   idPenalti = setInterval(() => {
-    let ok = false;
     window.addEventListener('keydown', (e) => {
       if (e.key === 'w' || e.key === 's' || e.key === 'a' || e.key === 'd') {
         ok = true;
       }
     });
-    if (!ok) {
+    if (ok === false) {
       points >= 50 ? (points -= 50) : (points = 0);
       score.textContent = `${points}`;
     }
@@ -180,6 +180,8 @@ function gameOver() {
   elements.forEach((e) => {
     e.isMoving = false;
     e.positions = generateRandom();
+    e.directionX = 2;
+    e.directionY = 2;
     e.pX =
       e.positions[0] < e.asteroid.width + 2
         ? e.positions[0] + e.asteroid.width
