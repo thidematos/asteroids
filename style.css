@@ -14,7 +14,7 @@ body {
   align-items: center;
   gap: 1rem;
   background-color: rgb(0, 0, 0);
-  background-image: url(/assets/space1.png);
+  background-image: url(assets/space1.png);
   background-size: 200% 200%;
   animation-name: bgAnimation;
   animation-duration: 10s;
